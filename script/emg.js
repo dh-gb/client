@@ -1,7 +1,7 @@
 const emgList = document.getElementById('emgScheduleList');
 
 export function fetchEMGSchedule() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/emg')
+    fetch('https://backend-h74a.onrender.com/api/emg')
         .then(res => res.json())
         .then(data => renderEMGSchedule(data))
         .catch(err => {

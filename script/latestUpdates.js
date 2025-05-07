@@ -1,7 +1,7 @@
 const latestUpdatelist = document.getElementById('eventList'); // Match the ID of the container
 
 export function fetchlatestUpdates() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/latest-updates')
+    fetch('https://backend-h74a.onrender.com/api/latest-updates')
         .then(res => res.json())
         .then(data => renderlatestUpdatelist(data))
         .catch(err => {

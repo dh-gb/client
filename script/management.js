@@ -1,7 +1,7 @@
 const managementlist = document.getElementById('managementlist');
 
 export function fetchmanagement() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/management')
+    fetch('https://backend-h74a.onrender.com/api/management')
         .then(res => res.json())
         .then(data => {
             managementlist.innerHTML = '';

@@ -1,7 +1,7 @@
 const awardsCertificateslist = document.getElementById('awardsCertificatesList');
 
 export function fetchawardsCertificates() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/awardsCertificates')
+    fetch('https://backend-h74a.onrender.com/api/awardsCertificates')
         .then(res => res.json())
         .then(data => renderawardsCertificates(data))
         .catch(err => {
