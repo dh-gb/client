@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>District Hospital Ganderbal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div id="mainContent" style="display: none;">
+        <header class="header">
+            <div class="header-content">
+                <img src="Images/image_3.jpg" alt="Logo" class="logo" />
+                <h1 class="title">District Hospital Ganderbal</h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="hospital-image">
+                <img src="Images/image_2.jpg" alt="Hospital Building">
+            </section>
+
+            <section class="cards">
+                <div class="card" onclick="openModal('managementModal')">
+                    <i class="icon">👔</i>
+                    <p>Management</p>
+                </div>
+                <div class="card" onclick="openModal('awardsModal')">
+                    <i class="icon">🏆</i>
+                    <p>Awards & Certificates</p>
+                </div>
+                <div class="card" onclick="openModal('opdModal')">
+                    <i class="icon">📅</i>
+                    <p>OPD Schedule</p>
+                </div>
+                <div class="card" onclick="openModal('emergencyModal')">
+                    <i class="icon">🚑 </i>
+                    <p>Emergency Schedule</p>
+                </div>
+            </section>
+
+            <section id="liveEvents" class="live-events-section">
+                <h3>Latest Downloads</h3>
+                <div id="eventList" class="event-list">
+                    <!-- Latest downloads will be populated here dynamically -->
+                </div>
+            </section>
+
+            <section class="contact">
+                <h2>Contact Us</h2>
+                <p>Duderhama, Ganderbal, Jammu & Kashmir 191201</p>
+                <p>Tel: 123-456-7990</p>
+                <p>Email: info@dhganderbal.in</p>
+            </section>
+
+        </main>
+
+        <!-- Modal Structure -->
+        <div id="managementModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('managementModal')">&times;</span>
+                <h2>Management</h2>
+                <div id="managementlist"></div>
+            </div>
+        </div>
+
+        <div id="opdModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('opdModal')">&times;</span>
+                <h2>OPD Schedule</h2>
+                <div id="opdScheduleList">
+                </div>
+            </div>
+        </div>
+
+        <div id="emergencyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('emergencyModal')">&times;</span>
+                <h2>Emergency Schedule</h2>
+                <div id="emgScheduleList"></div>
+            </div>
+        </div>
+
+        <div id="awardsModal" class="modal">
+            <div class="modal-content modal-increased-size">
+                <span class="close" onclick="closeModal('awardsModal')">&times;</span>
+                <h2>Awards & Certificates</h2>
+                <div id="awardsCertificatesList"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script/main.js"></script>
+
+</body>
+
+</html>
