@@ -109,85 +109,56 @@ body {
 /*Welcome text*/
 
 
-/* ============================
-   Welcome Screen Scroll Effect
-============================ */
-.welcome-section {
-    margin: 30px 0;
-}
-
 .scroll-box {
-    width: 90%;
-    max-width: 800px;
-    height: 250px;
-    /* visible window height */
-    margin: 20px auto;
-    overflow: hidden;
-    border: 5px solid rgba(0, 82, 147, 0.9);
-    border-radius: 5px;
-    background: #f8f9fa;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.scroll-inner {
+    width: 90%;                       /* takes up 90% of the screen width */
+    max-width: 800px;                 /* but not more than 800px */
+    height: 200px;                    /* visible height of the scrolling area */
+    margin: 20px auto;                /* centers the box horizontally */
+    overflow: hidden;                 /* hides the text that scrolls out of view */
+    border: 5px solid rgba(0, 82, 147, 0.9);  /* blue border */
+    border-radius: 2px;
+    background: #f8f9fa;              /* light gray background */
+    position: relative;               /* needed for absolute child positioning */
+  }
+  
+  /* Inner container that moves up and down */
+  .scroll-inner {
     position: absolute;
     width: 100%;
-    animation: scroll-up 60s linear infinite;
-}
-
-.scroll-inner p {
+    animation: scroll-vertical 15s linear infinite alternate; /* smooth scrolling */
+  }
+  
+  /* Actual text styling */
+  .scroll-inner pre {
     font-size: 1rem;
     line-height: 1.6;
-    color: #FF0000;
-    /* bright red */
-    text-align: center;
+    color: red;                       /* text color (emergency red) */
+    text-align: center;               /* centers the text horizontally */
     padding: 15px;
     margin: 0;
-    white-space: pre-line;
-    /* preserve line breaks */
-}
-
-/* Animation moves text smoothly upward */
-@keyframes scroll-up {
-    0% {
-        transform: translateY(100%);
-    }
-
-    /* start below box */
-    100% {
-        transform: translateY(-250%);
-    }
-
-    /* scroll far enough up for all text */
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-    .scroll-box {
-        height: 180px;
-    }
-
-    .scroll-inner p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .scroll-box {
-        height: 150px;
-    }
-
-    .scroll-inner p {
-        font-size: 0.85rem;
-    }
-}
-
-
-
-
-
-
+  }
+  
+  /* Animation: moves text up and down */
+  @keyframes scroll-vertical {
+    0%   { top: 0; }                  /* start from top */
+    100% { top: -100%; }              /* move up completely */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .scroll-box { height: 150px; }    /* smaller height for tablets */
+    .scroll-inner p { font-size: 0.9rem; }
+  }
+  
+  @media (max-width: 480px) {
+    .scroll-box { height: 120px; }    /* smaller height for phones */
+    .scroll-inner p { font-size: 0.85rem; }
+  }
+  
+  
+  
+  
+  
 
 
 
@@ -345,35 +316,30 @@ Test */
 
 /* Live Events Section */
 .live-events-section {
-    background-color: #f9f9f9;
-    /* Light background for contrast */
+    background-color: #f9f9f9; /* Light background for contrast */
     padding: 50px;
     margin: 20px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading style */
-.live-events-section h3 {
+  }
+  
+  /* Heading style */
+  .live-events-section h3 {
     text-align: center;
     color: #333;
     margin-bottom: 15px;
-}
-
-/* Event list container */
-.event-list {
-    height: 500px;
-    /* Set a fixed height for the event list */
-    overflow-y: scroll;
-    /* Enables vertical scrolling within the container */
-    padding-right: 15px;
-    /* Add space for the scrollbar */
-    box-sizing: border-box;
-    /* Ensures padding doesn't affect the width */
-}
-
-/* Event item styling */
-.event-item {
+  }
+  
+  /* Event list container */
+  .event-list {
+    height: 500px; /* Set a fixed height for the event list */
+    overflow-y: scroll; /* Enables vertical scrolling within the container */
+    padding-right: 15px; /* Add space for the scrollbar */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  }
+  
+  /* Event item styling */
+  .event-item {
     padding: 1px;
     margin-bottom: 10px;
     background-color: #fff;
@@ -381,36 +347,34 @@ Test */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     color: #555;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
     .live-events-section {
-        padding: 15px;
+      padding: 15px;
     }
-
+  
     .event-item {
-        font-size: 14px;
+      font-size: 14px;
     }
-
+  
     .event-list {
-        height: 350px;
-        /* Adjust height for smaller screens */
+      height: 350px; /* Adjust height for smaller screens */
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .live-events-section {
-        padding: 10px;
+      padding: 10px;
     }
-
+  
     .event-item {
-        font-size: 12px;
-        /* Smaller text for smaller screens */
+      font-size: 12px; /* Smaller text for smaller screens */
     }
-
+  
     .event-list {
-        height: 300px;
-        /* Further adjust height for very small screens */
+      height: 300px; /* Further adjust height for very small screens */
     }
-}
+  }
+  
