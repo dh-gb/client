@@ -129,7 +129,7 @@ body {
   }
   
   /* Actual text styling */
-  .scroll-inner pre {
+  .scroll-inner p {
     font-size: 1rem;
     line-height: 1.6;
     color: red;                       /* text color (emergency red) */
