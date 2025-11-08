@@ -106,18 +106,10 @@ body {
 }
 
 
+/*test  area*/
 
 
-
-/* ===============================
-   WELCOME SCREEN STYLES
-   =============================== */
-
-/* ===============================
-   SMALL SCROLLING TEXT BOX
-   =============================== */
-
-   .scroll-box {
+.scroll-box {
     width: 90%;
     max-width: 600px;
     height: 200px; /* small window to view text */
@@ -174,42 +166,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-  
-  /* Responsive font scaling */
-  @media (max-width: 768px) {
-    .scrolling-text {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .scrolling-text {
-      font-size: 0.9rem;
-    }
-  }
-  
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .welcome-text {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .welcome-text {
-        font-size: 1.5rem;
-    }
-}
 
 
 
@@ -361,35 +317,30 @@ Test */
 
 /* Live Events Section */
 .live-events-section {
-    background-color: #f9f9f9;
-    /* Light background for contrast */
+    background-color: #f9f9f9; /* Light background for contrast */
     padding: 50px;
     margin: 20px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading style */
-.live-events-section h3 {
+  }
+  
+  /* Heading style */
+  .live-events-section h3 {
     text-align: center;
     color: #333;
     margin-bottom: 15px;
-}
-
-/* Event list container */
-.event-list {
-    height: 500px;
-    /* Set a fixed height for the event list */
-    overflow-y: scroll;
-    /* Enables vertical scrolling within the container */
-    padding-right: 15px;
-    /* Add space for the scrollbar */
-    box-sizing: border-box;
-    /* Ensures padding doesn't affect the width */
-}
-
-/* Event item styling */
-.event-item {
+  }
+  
+  /* Event list container */
+  .event-list {
+    height: 500px; /* Set a fixed height for the event list */
+    overflow-y: scroll; /* Enables vertical scrolling within the container */
+    padding-right: 15px; /* Add space for the scrollbar */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  }
+  
+  /* Event item styling */
+  .event-item {
     padding: 1px;
     margin-bottom: 10px;
     background-color: #fff;
@@ -397,36 +348,34 @@ Test */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     color: #555;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
     .live-events-section {
-        padding: 15px;
+      padding: 15px;
     }
-
+  
     .event-item {
-        font-size: 14px;
+      font-size: 14px;
     }
-
+  
     .event-list {
-        height: 350px;
-        /* Adjust height for smaller screens */
+      height: 350px; /* Adjust height for smaller screens */
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .live-events-section {
-        padding: 10px;
+      padding: 10px;
     }
-
+  
     .event-item {
-        font-size: 12px;
-        /* Smaller text for smaller screens */
+      font-size: 12px; /* Smaller text for smaller screens */
     }
-
+  
     .event-list {
-        height: 300px;
-        /* Further adjust height for very small screens */
+      height: 300px; /* Further adjust height for very small screens */
     }
-}
+  }
+  
