@@ -117,7 +117,7 @@ body {
     height: 200px;            /* visible window height */
     margin: 20px auto;
     overflow: hidden;
-    border: 5px solid black;
+    border: 5px solid #000000;
     border-radius: 1px;
     background: #f8f9fa;
     position: relative;
