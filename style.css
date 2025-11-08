@@ -113,7 +113,7 @@ body {
 
 .scroll-box {
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     height: 200px;            /* visible window height */
     margin: 20px auto;
     overflow: hidden;
