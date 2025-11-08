@@ -107,7 +107,6 @@ body {
 
 
 /*Welcome text*/
-
 .scroll-box {
     width: 90%;
     max-width: 800px;
@@ -121,31 +120,30 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
-  /* Scrolling container */
+  /* Inner scrolling area */
   .scroll-inner {
     display: flex;
     flex-direction: column;
     animation: scroll-up 40s linear infinite;
   }
 
-  /* Each text block (duplicated for smooth loop) */
+  /* Text content */
   .scroll-content {
     padding: 20px;
     color: #b30000;
     font-family: 'Courier New', monospace;
     font-size: 1rem;
     line-height: 1.6;
-    white-space: pre-wrap;
     text-align: center;
   }
 
-  /* Keyframes for smooth continuous scroll */
+  /* Keyframes for smooth scroll */
   @keyframes scroll-up {
     0%   { transform: translateY(0); }
     100% { transform: translateY(-50%); }
   }
 
-  /* Responsive */
+  /* Responsive design */
   @media (max-width: 768px) {
     .scroll-box { height: 160px; }
     .scroll-content { font-size: 0.9rem; padding: 15px; }
