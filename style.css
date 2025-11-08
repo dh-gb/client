@@ -113,7 +113,7 @@ body {
 
 .scroll-box {
     width: 100%;
-    max-height: 40vh;           /* visible window height */
+    max-height: 20vh;           /* visible window height */
     margin: 20px auto;
     overflow: hidden;
     border: 2px solid rgba(0, 82, 147, 0.9);
