@@ -125,7 +125,7 @@ body {
   .scroll-inner {
     position: absolute;
     width: 100%;
-    animation: scroll-vertical 15s linear infinite alternate; /* smooth scrolling */
+    animation: scroll-vertical 30s linear infinite alternate; /* smooth scrolling */
   }
   
   /* Actual text styling */
