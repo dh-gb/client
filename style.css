@@ -106,56 +106,55 @@ body {
 }
 
 
-/*test  area*/
+/*Welcome text*/
 
-
-/* ============== Auto Up & Down Text Scroller ============== */
 
 .scroll-box {
-    width: 90%;
-    max-width: 800px;
-    height: 200px;            /* visible window height */
-    margin: 20px auto;
-    overflow: hidden;
-    border: 5px solid rgba(0, 82, 147, 0.9);
+    width: 90%;                       /* takes up 90% of the screen width */
+    max-width: 800px;                 /* but not more than 800px */
+    height: 200px;                    /* visible height of the scrolling area */
+    margin: 20px auto;                /* centers the box horizontally */
+    overflow: hidden;                 /* hides the text that scrolls out of view */
+    border: 5px solid rgba(0, 82, 147, 0.9);  /* blue border */
     border-radius: 2px;
-    background: #f8f9fa;
-    position: relative;
+    background: #f8f9fa;              /* light gray background */
+    position: relative;               /* needed for absolute child positioning */
   }
   
-  /* Inner container that moves */
+  /* Inner container that moves up and down */
   .scroll-inner {
     position: absolute;
     width: 100%;
-    animation: scroll-vertical 15s linear infinite alternate;
+    animation: scroll-vertical 15s linear infinite alternate; /* smooth scrolling */
   }
   
-  /* Actual text style */
+  /* Actual text styling */
   .scroll-inner p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #FF0000;
-    text-align: center;
+    color: red;                       /* text color (emergency red) */
+    text-align: center;               /* centers the text horizontally */
     padding: 15px;
     margin: 0;
   }
   
-  /* Animation keyframes: goes up then down */
+  /* Animation: moves text up and down */
   @keyframes scroll-vertical {
-    0%   { top: 0; }
-    100% { top: -100%; }   /* moves all content up */
+    0%   { top: 0; }                  /* start from top */
+    100% { top: -100%; }              /* move up completely */
   }
   
-  /* Responsive tweaks */
+  /* Responsive adjustments */
   @media (max-width: 768px) {
-    .scroll-box { height: 150px; }
+    .scroll-box { height: 150px; }    /* smaller height for tablets */
     .scroll-inner p { font-size: 0.9rem; }
   }
   
   @media (max-width: 480px) {
-    .scroll-box { height: 120px; }
+    .scroll-box { height: 120px; }    /* smaller height for phones */
     .scroll-inner p { font-size: 0.85rem; }
   }
+  
   
   
   
