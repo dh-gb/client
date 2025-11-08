@@ -117,7 +117,7 @@ body {
     height: 200px;            /* visible window height */
     margin: 20px auto;
     overflow: hidden;
-    border: 10px solid rgba(0, 82, 147, 0.9);
+    border: 5px solid black;
     border-radius: 1px;
     background: #f8f9fa;
     position: relative;
@@ -136,7 +136,7 @@ body {
     line-height: 1.6;
     color: #333;
     text-align: left;
-    padding: 10px;
+    padding: 15px;
     margin: 0;
   }
   
