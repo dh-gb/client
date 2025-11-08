@@ -108,51 +108,52 @@ body {
 
 /*Welcome text*/
 
-
 .scroll-box {
-    width: 90%;                       /* takes up 90% of the screen width */
-    max-width: 800px;                 /* but not more than 800px */
-    height: 200px;                    /* visible height of the scrolling area */
-    margin: 20px auto;                /* centers the box horizontally */
-    overflow: hidden;                 /* hides the text that scrolls out of view */
-    border: 5px solid rgba(0, 82, 147, 0.9);  /* blue border */
-    border-radius: 2px;
-    background: #f8f9fa;              /* light gray background */
-    position: relative;               /* needed for absolute child positioning */
+    width: 90%;
+    max-width: 800px;
+    height: 220px;
+    margin: 30px auto;
+    overflow: hidden;
+    border: 4px solid rgba(0, 82, 147, 0.9);
+    border-radius: 6px;
+    background: #f8f9fa;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
-  
-  /* Inner container that moves up and down */
+
+  /* Scrolling container */
   .scroll-inner {
-    position: absolute;
-    width: 100%;
-    animation: scroll-vertical 30s linear infinite alternate; /* smooth scrolling */
+    display: flex;
+    flex-direction: column;
+    animation: scroll-up 40s linear infinite;
   }
-  
-  /* Actual text styling */
-  .scroll-inner p {
+
+  /* Each text block (duplicated for smooth loop) */
+  .scroll-content {
+    padding: 20px;
+    color: #b30000;
+    font-family: 'Courier New', monospace;
     font-size: 1rem;
     line-height: 1.6;
-    color: red;                       /* text color (emergency red) */
-    text-align: center;               /* centers the text horizontally */
-    padding: 15px;
-    margin: 0;
+    white-space: pre-wrap;
+    text-align: center;
   }
-  
-  /* Animation: moves text up and down */
-  @keyframes scroll-vertical {
-    0%   { top: 0; }                  /* start from top */
-    100% { top: -100%; }              /* move up completely */
+
+  /* Keyframes for smooth continuous scroll */
+  @keyframes scroll-up {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
   }
-  
-  /* Responsive adjustments */
+
+  /* Responsive */
   @media (max-width: 768px) {
-    .scroll-box { height: 150px; }    /* smaller height for tablets */
-    .scroll-inner p { font-size: 0.9rem; }
+    .scroll-box { height: 160px; }
+    .scroll-content { font-size: 0.9rem; padding: 15px; }
   }
-  
+
   @media (max-width: 480px) {
-    .scroll-box { height: 120px; }    /* smaller height for phones */
-    .scroll-inner p { font-size: 0.85rem; }
+    .scroll-box { height: 130px; }
+    .scroll-content { font-size: 0.85rem; padding: 10px; }
   }
   
   
