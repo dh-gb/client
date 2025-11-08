@@ -22,7 +22,51 @@
                 <h1 class="title">District Hospital Ganderbal</h1>
             </div>
         </header>
+        <style>
+            body {
+              margin: 0;
+              height: 100vh;
+              background-color: black; /* or white if you prefer */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+              color: white; /* text color */
+              font-family: 'Poppins', sans-serif;
+              font-size: 2rem;
+              font-weight: 600;
+              text-align: center;
+            }
+        
+            .welcome-text {
+              position: absolute;
+              top: -100px; /* start off-screen */
+              animation: slideDown 4s ease-in-out forwards;
+            }
+        
+            @keyframes slideDown {
+              0% {
+                top: -100px;
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 1;
+              }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="welcome-text">
+            Welcome to [Your District Name] District Hospital
+          </div>
 
+
+          
         <main>
             <section class="hospital-image">
                 <img src="Images/image_2.jpg" alt="Hospital Building">
