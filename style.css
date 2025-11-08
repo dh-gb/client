@@ -109,56 +109,54 @@ body {
 /*test  area*/
 
 
+/* ============== Auto Up & Down Text Scroller ============== */
+
 .scroll-box {
     width: 90%;
     max-width: 600px;
-    height: 200px; /* small window to view text */
+    height: 200px;            /* visible window height */
     margin: 20px auto;
     overflow: hidden;
     border: 2px solid #005293;
     border-radius: 10px;
-    background-color: #f8f9fa;
+    background: #f8f9fa;
     position: relative;
   }
   
-  .scrolling-text {
-    display: inline-block;
-    position: relative;
-    animation: scrollUp 30s linear infinite;
-    text-align: left;
+  /* Inner container that moves */
+  .scroll-inner {
+    position: absolute;
+    width: 100%;
+    animation: scroll-vertical 25s linear infinite alternate;
+  }
+  
+  /* Actual text style */
+  .scroll-inner p {
     font-size: 1rem;
     line-height: 1.6;
     color: #333;
+    text-align: left;
     padding: 10px;
+    margin: 0;
   }
   
-  @keyframes scrollUp {
-    0% {
-      top: 100%;
-    }
-    100% {
-      top: -100%;
-    }
+  /* Animation keyframes: goes up then down */
+  @keyframes scroll-vertical {
+    0%   { top: 0; }
+    100% { top: -100%; }   /* moves all content up */
   }
   
-  /* Responsive adjustments */
+  /* Responsive tweaks */
   @media (max-width: 768px) {
-    .scroll-box {
-      height: 150px;
-    }
-    .scrolling-text {
-      font-size: 0.9rem;
-    }
+    .scroll-box { height: 150px; }
+    .scroll-inner p { font-size: 0.9rem; }
   }
   
   @media (max-width: 480px) {
-    .scroll-box {
-      height: 120px;
-    }
-    .scrolling-text {
-      font-size: 0.85rem;
-    }
+    .scroll-box { height: 120px; }
+    .scroll-inner p { font-size: 0.85rem; }
   }
+  
   
 
 
