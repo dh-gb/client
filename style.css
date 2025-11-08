@@ -106,6 +106,77 @@ body {
 }
 
 
+
+
+
+/* ===============================
+   WELCOME SCREEN STYLES
+   =============================== */
+
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* Change to white if preferred */
+    color: white;
+    /* Change to black if background is white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 10000;
+    overflow: hidden;
+    transition: opacity 1s ease;
+}
+
+.welcome-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    top: -80px;
+    opacity: 0;
+    animation: slideDown 3s ease forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        top: -80px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
 /* Card Styling */
 
 .cards {
@@ -251,30 +322,35 @@ Test */
 
 /* Live Events Section */
 .live-events-section {
-    background-color: #f9f9f9; /* Light background for contrast */
+    background-color: #f9f9f9;
+    /* Light background for contrast */
     padding: 50px;
     margin: 20px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Heading style */
-  .live-events-section h3 {
+}
+
+/* Heading style */
+.live-events-section h3 {
     text-align: center;
     color: #333;
     margin-bottom: 15px;
-  }
-  
-  /* Event list container */
-  .event-list {
-    height: 500px; /* Set a fixed height for the event list */
-    overflow-y: scroll; /* Enables vertical scrolling within the container */
-    padding-right: 15px; /* Add space for the scrollbar */
-    box-sizing: border-box; /* Ensures padding doesn't affect the width */
-  }
-  
-  /* Event item styling */
-  .event-item {
+}
+
+/* Event list container */
+.event-list {
+    height: 500px;
+    /* Set a fixed height for the event list */
+    overflow-y: scroll;
+    /* Enables vertical scrolling within the container */
+    padding-right: 15px;
+    /* Add space for the scrollbar */
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect the width */
+}
+
+/* Event item styling */
+.event-item {
     padding: 1px;
     margin-bottom: 10px;
     background-color: #fff;
@@ -282,34 +358,36 @@ Test */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     color: #555;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
     .live-events-section {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .event-item {
-      font-size: 14px;
+        font-size: 14px;
     }
-  
+
     .event-list {
-      height: 350px; /* Adjust height for smaller screens */
+        height: 350px;
+        /* Adjust height for smaller screens */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .live-events-section {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     .event-item {
-      font-size: 12px; /* Smaller text for smaller screens */
+        font-size: 12px;
+        /* Smaller text for smaller screens */
     }
-  
+
     .event-list {
-      height: 300px; /* Further adjust height for very small screens */
+        height: 300px;
+        /* Further adjust height for very small screens */
     }
-  }
-  
+}

@@ -10,6 +10,32 @@ initModalCloseOnOutsideClick();
 
 // Show spinner until fetch completes or timeout hits
 window.addEventListener("DOMContentLoaded", async () => {
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const loader = document.getElementById('loadingOverlay');
+    const mainContent = document.getElementById('mainContent');
+
+    // Step 1: Show welcome screen first
+    if (welcomeScreen) {
+        welcomeScreen.style.display = 'flex';
+        mainContent.style.display = 'none';
+        if (loader) loader.style.display = 'none';
+    }
+
+    // Wait for 3 seconds while showing the welcome text
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
+    // Step 2: Fade out the welcome screen
+    if (welcomeScreen) {
+        welcomeScreen.style.transition = 'opacity 1s ease';
+        welcomeScreen.style.opacity = '0';
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        welcomeScreen.style.display = 'none';
+    }
+
+    // Step 3: Now show loading spinner
+    if (loader) loader.style.display = 'flex';
+    
+    
     const timeout = new Promise(resolve => setTimeout(resolve, 10000)); // fallback in 10s
 
     try {
